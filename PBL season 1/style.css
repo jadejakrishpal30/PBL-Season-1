@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBL Season 1 | Pune</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0b0b;
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  padding:20px 10%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+
+nav ul{
+  list-style:none;
+  display:flex;
+  gap:30px;
+}
+
+nav a{
+  text-decoration:none;
+  color:white;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:gold;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:url('https://images.unsplash.com/photo-1508098682722-e99c643e7485') center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  background:linear-gradient(to top,black,rgba(0,0,0,0.4));
+}
+
+.hero-content{
+  position:relative;
+  animation:fadeUp 1.5s ease;
+}
+
+.hero h1{
+  font-size:55px;
+  font-weight:800;
+}
+
+.hero p{
+  margin:20px 0;
+  font-size:18px;
+}
+
+.btn{
+  display:inline-block;
+  padding:12px 30px;
+  background:gold;
+  color:black;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:30px;
+  transition:0.3s;
+}
+
+.btn:hover{
+  background:white;
+  transform:scale(1.05);
+}
+
+/* SECTIONS */
+.section{
+  padding:100px 10%;
+  text-align:center;
+}
+
+.section h2{
+  font-size:36px;
+  margin-bottom:30px;
+  color:gold;
+}
+
+.dark{
+  background:#111;
+}
+
+/* CARDS */
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  background:#1a1a1a;
+  padding:30px;
+  width:300px;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  background:#222;
+}
+
+/* TIERS */
+.tier{
+  margin:40px auto;
+  padding:40px;
+  max-width:800px;
+  background:#151515;
+  border-radius:20px;
+  transition:0.4s;
+}
+
+.tier:hover{
+  transform:scale(1.02);
+}
+
+.gold{ border:2px solid gold; }
+.silver{ border:2px solid silver; }
+.bronze{ border:2px solid #cd7f32; }
+
+.tier ul{
+  text-align:left;
+  margin-top:20px;
+  line-height:1.8;
+}
+
+/* FOOTER */
+footer{
+  padding:30px;
+  background:black;
+  text-align:center;
+}
+
+/* SCROLL ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div><strong>PBL SEASON 1</strong></div>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#event">Event</a></li>
+    <li><a href="#sponsors">Sponsors</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Pune's Premier Football League</h1>
+    <p>Draft Night + 3 Day Tournament | 16 Teams</p>
+    <a href="#sponsors" class="btn">Become a Founding Sponsor</a>
+  </div>
+</section>
+
+<section id="about" class="section fade">
+  <h2>About PBL Season 1</h2>
+  <p>PBL Season 1 marks the launch of a premier football competition in Pune featuring 16 competitive teams.</p>
+  <p>The format includes a draft night followed by a 3-day tournament.</p>
+  <p><strong>Final Day Event:</strong> 3 PM – 11 PM | Peak Audience from 6 PM onwards.</p>
+  <p style="margin-top:20px;color:gold;font-weight:600;">
+    Supporting now positions your brand as a Founding Sponsor of the league.
+  </p>
+</section>
+
+<section id="event" class="section dark fade">
+  <h2>Event Structure</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>Draft Night</h3>
+      <p>Player selections and sponsor activations.</p>
+    </div>
+    <div class="card">
+      <h3>3 Day Tournament</h3>
+      <p>16 teams competing in structured league matches.</p>
+    </div>
+    <div class="card">
+      <h3>Grand Finale</h3>
+      <p>Premium closing event from 3 PM to 11 PM.</p>
+    </div>
+  </div>
+</section>
+
+<section id="sponsors" class="section fade">
+  <h2>Sponsorship Opportunities</h2>
+
+  <div class="tier gold">
+    <h3>Title Sponsor (Gold)</h3>
+    <ul>
+      <li>Name integrated with PBL branding</li>
+      <li>Front Jersey Advertisement</li>
+      <li>Premium Banner Placement</li>
+      <li>3–5 Specialised Reels</li>
+      <li>Winning Team Trophy Branding</li>
+      <li>Exclusive Draft & After Event Sponsor</li>
+    </ul>
+  </div>
+
+  <div class="tier silver">
+    <h3>Co-Powered By (Silver)</h3>
+    <ul>
+      <li>Jersey Sleeve Branding</li>
+      <li>Banner Placement</li>
+      <li>Gamechanger Event Sponsor</li>
+      <li>Best Player & Runner-up Trophy Branding</li>
+    </ul>
+  </div>
+
+  <div class="tier bronze">
+    <h3>Official Partner (Bronze)</h3>
+    <ul>
+      <li>Back / Shoulder Jersey Branding</li>
+      <li>Match & Category Trophy Branding</li>
+      <li>1–3 Promotional Reels</li>
+    </ul>
+  </div>
+
+  <p style="margin-top:30px;">
+    We are open to discussing pricing and partnership structures.
+    Let’s schedule a meeting to explore collaboration.
+  </p>
+</section>
+
+<footer>
+  © 2026 PBL Season 1 | Pune
+</footer>
+
+<script>
+const faders = document.querySelectorAll('.fade');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      entry.target.classList.add('show');
+    }
+  });
+}, { threshold: 0.2 });
+
+faders.forEach(el => observer.observe(el));
+</script>
+
+</body>
+</html>
